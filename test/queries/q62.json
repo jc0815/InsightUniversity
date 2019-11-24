@@ -1,0 +1,29 @@
+{
+    "title": "GT multiple keys",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "courses_dept":"cpsc"
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_avg": 98,
+                        "courses_pass": 10
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

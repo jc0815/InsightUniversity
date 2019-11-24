@@ -1,0 +1,30 @@
+{
+    "title": "Transformation sum course avg w/ group course name",
+    "query": {
+      "WHERE": {
+        "EQ": {
+          "courses_avg": 60
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_title",
+          "overallAvg"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "courses_title"
+        ],
+        "APPLY": [
+          {
+            "overallAvg": {
+              "SUM": "courses_avg"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_title":"rl es manage i","overallAvg":60},{"courses_title":"cpt aid ms pr as","overallAvg":60},{"courses_title":"nuclear chemisty","overallAvg":120},{"courses_title":"dnt hyg try & pr","overallAvg":60},{"courses_title":"oral epidemiolgy","overallAvg":60},{"courses_title":"oral micr&immun","overallAvg":120},{"courses_title":"int rel grt pwrs","overallAvg":60},{"courses_title":"pharmacy ii","overallAvg":60},{"courses_title":"log & crit think","overallAvg":60},{"courses_title":"","overallAvg":60}]
+}

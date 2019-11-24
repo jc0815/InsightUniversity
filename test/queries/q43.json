@@ -1,0 +1,29 @@
+{
+    "title": "order syntax",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "courses_instructor": "holmes, reid"
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 97
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass"
+            ],
+            "ORDER": {
+                "courses_avg": 1
+            }
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,29 @@
+{
+    "title": "double column",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 99
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 99.19
+        },
+        {
+            "courses_avg": 99.78
+        },
+        {
+            "courses_avg": 99.78
+        }
+    ]
+}

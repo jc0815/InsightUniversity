@@ -1,0 +1,14 @@
+{
+    "name": "@types/decimal.js",
+    "version": "7.4.0",
+    "typings": null,
+    "description": "Stub TypeScript definitions entry for decimal.js, which provides its own types definitions",
+    "main": "",
+    "scripts": {},
+    "author": "",
+    "repository": "https://github.com/MikeMcl/decimal.js",
+    "license": "MIT",
+    "dependencies": {
+        "decimal.js": "*"
+    }
+}

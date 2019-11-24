@@ -1,0 +1,52 @@
+{
+    "title": "OR in NOT in AND",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "NOT": {
+                        "OR": [
+                            {
+                                "IS": {
+                                    "courses_dept": "cpsc"
+                                }
+                            },
+                            {
+                                "IS": {
+                                    "courses_dept": "anth"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 97
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_pass": 1,
+            "courses_avg": 97
+        },
+        {
+            "courses_pass": 8,
+            "courses_avg": 97
+        },
+        {
+            "courses_pass": 1,
+            "courses_avg": 97
+        }
+    ]
+}

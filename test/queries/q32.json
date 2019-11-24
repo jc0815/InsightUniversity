@@ -1,0 +1,20 @@
+{
+    "title": "IS case 7",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_instructor": "holmes, *reid"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass",
+                "courses_dept"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

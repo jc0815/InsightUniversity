@@ -1,0 +1,36 @@
+{
+    "title": "IS case 1",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_instructor": "*holmes, reid"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass",
+                "courses_dept"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 79,
+            "courses_pass": 118,
+            "courses_dept": "cpsc"
+        },
+        {
+            "courses_avg": 81.17,
+            "courses_pass": 139,
+            "courses_dept": "cpsc"
+        },
+        {
+            "courses_avg": 89,
+            "courses_pass": 7,
+            "courses_dept": "cpsc"
+        }
+    ]
+}

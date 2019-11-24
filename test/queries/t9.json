@@ -1,0 +1,61 @@
+{
+    "title": "Reverse order w/ lat & lon columns",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_shortname": "WOOD"
+                    }
+                },
+                {
+                    "NOT": {
+                        "GT": {
+                            "rooms_seats": 150
+                        }
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "rooms_type",
+                "rooms_lat",
+                "rooms_lon"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_type",
+                    "rooms_shortname"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname",
+                "rooms_type",
+                "rooms_lat",
+                "rooms_lon"
+            ],
+            "APPLY": [
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "rooms_shortname": "WOOD",
+            "rooms_type": "Tiered Large Group",
+            "rooms_lat": 49.26478,
+            "rooms_lon": -123.24673
+        },
+        {
+            "rooms_shortname": "WOOD",
+            "rooms_type": "Small Group",
+            "rooms_lat": 49.26478,
+            "rooms_lon": -123.24673
+        }
+    ]
+}

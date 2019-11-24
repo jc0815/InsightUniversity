@@ -1,0 +1,35 @@
+{
+    "title": "no order",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass",
+                "courses_dept"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 97,
+            "courses_pass": 1,
+            "courses_dept": "crwr"
+        },
+        {
+            "courses_avg": 97,
+            "courses_pass": 8,
+            "courses_dept": "epse"
+        },
+        {
+            "courses_avg": 97,
+            "courses_pass": 1,
+            "courses_dept": "psyc"
+        }
+    ]
+}

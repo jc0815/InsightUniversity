@@ -1,0 +1,19 @@
+{
+    "title": "invalid mfield",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_av_g": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass",
+                "courses_dept"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

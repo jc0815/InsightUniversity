@@ -1,0 +1,46 @@
+{
+    "title": "Invalid key in apply transformations",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "IS": {
+              "rooms_furniture": "*Tables*"
+            }
+          },
+          {
+            "GT": {
+              "rooms_seats": 300
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "rooms_shortname",
+          "maxSeats"
+        ],
+        "ORDER": {
+          "dir": "DOWN",
+          "keys": [
+            "maxSeats"
+          ]
+        }
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "rooms_shortname"
+        ],
+        "APPLYa": [
+          {
+            "maxSeats": {
+              "MAX": "rooms_seats"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
+

@@ -1,0 +1,31 @@
+{
+    "title": "Keys in COLUMNS not in group when TRANSFORMATIONS is present",
+    "query": {
+      "WHERE": {
+        "EQ": {
+          "rooms_seats": 60
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "rooms_seats",
+          "rooms_address",
+          "overallAvg"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "rooms_seats"
+        ],
+        "APPLY": [
+          {
+            "overallAvg": {
+              "COUNT": "rooms_seats"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

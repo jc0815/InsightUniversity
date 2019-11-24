@@ -1,0 +1,19 @@
+{
+    "title": "invalid sfield",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_deptt": "cpsc"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass",
+                "courses_dept"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,44 @@
+{
+    "title": "double Negation",
+    "query": {
+        "WHERE": {
+            "NOT": {
+                "NOT": {
+                    "LT": {
+                        "courses_pass": 1
+                    }
+                }
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 0
+        },
+        {
+            "courses_avg": 0
+        },
+        {
+            "courses_avg": 0
+        },
+        {
+            "courses_avg": 1
+        },
+        {
+            "courses_avg": 4
+        },
+        {
+            "courses_avg": 4
+        },
+        {
+            "courses_avg": 4.5
+        }
+    ]
+}

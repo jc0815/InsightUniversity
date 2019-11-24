@@ -1,0 +1,19 @@
+{
+    "title": "invalid inputString",
+    "query": {
+        "WHERE": {
+            "LT": {
+                "courses_avgg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg",
+                "courses_pass",
+                "courses_dept"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,194 @@
+
+<form data-type="courses">
+    <div class="form-group conditions">
+        <legend>Conditions</legend>
+        <div class="control-group condition-type">
+            <div class="control conditions-all-radio">
+                <input id="courses-conditiontype-all" name="conditionType" value="all" type="radio" checked="checked">
+                <label for="courses-conditiontype-all">All of the following</label>
+            </div>
+            <div class="control conditions-any-radio">
+                <input id="courses-conditiontype-any" name="conditionType" value="any" type="radio">
+                <label for="courses-conditiontype-any">Any of the following</label>
+            </div>
+            <div class="control conditions-none-radio">
+                <input id="courses-conditiontype-none" name="conditionType" value="none" type="radio">
+                <label for="courses-conditiontype-none">None of the following</label>
+            </div>
+        </div>
+        <div class="conditions-container"><div class="control-group condition">
+            <div class="control not">
+                <input type="checkbox">
+                <label>Not</label>
+            </div>
+            <div class="control fields">
+                <select>
+                    <option value="audit">
+                        Audit
+                    </option>                <option value="avg">
+                    Average
+                </option>                <option value="dept" selected="selected">
+                    Department
+                </option>                <option value="fail">
+                    Fail
+                </option>                <option value="id">
+                    ID
+                </option>                <option value="instructor">
+                    Instructor
+                </option>                <option value="pass">
+                    Pass
+                </option>                <option value="title">
+                    Title
+                </option>                <option value="uuid">
+                    UUID
+                </option>                <option value="year">
+                    Year
+                </option>    </select>
+            </div>
+            <div class="control operators">
+                <select>
+                    <option value="EQ">
+                        EQ
+                    </option>                <option value="GT">
+                    GT
+                </option>                <option value="IS" selected="selected">
+                    IS
+                </option>                <option value="LT">
+                    LT
+                </option>    </select>
+            </div>
+            <div class="control term">
+                <input type="text" value="cpsc">
+            </div>    <a class="icon icon-minus" href="#"></a>
+        </div></div>
+        <div class="icon-container"><a class="icon icon-plus" href="#"></a></div>
+    </div>
+    <div class="form-group columns">
+        <legend>Columns</legend>
+        <div class="control-group">
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-audit" data-key="audit" value="audit">
+                <label for="courses-columns-field-audit">Audit</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-avg" data-key="avg" value="avg">
+                <label for="courses-columns-field-avg">Average</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-dept" data-key="dept" value="dept" checked="checked">
+                <label for="courses-columns-field-dept">Department</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-fail" data-key="fail" value="fail">
+                <label for="courses-columns-field-fail">Fail</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-id" data-key="id" value="id" checked="checked">
+                <label for="courses-columns-field-id">ID</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-instructor" data-key="instructor" value="instructor">
+                <label for="courses-columns-field-instructor">Instructor</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-pass" data-key="pass" value="pass">
+                <label for="courses-columns-field-pass">Pass</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-title" data-key="title" value="title">
+                <label for="courses-columns-field-title">Title</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-uuid" data-key="uuid" value="uuid">
+                <label for="courses-columns-field-uuid">UUID</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-columns-field-year" data-key="year" value="year">
+                <label for="courses-columns-field-year">Year</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group order">
+        <legend>Order</legend>
+        <div class="control-group">
+            <div class="control order fields">
+                <select multiple="">
+                    <option value="audit">
+                        Audit
+                    </option>                <option value="avg">
+                    Average
+                </option>                <option value="dept">
+                    Department
+                </option>                <option value="fail">
+                    Fail
+                </option>                <option value="id" selected="selected">
+                    ID
+                </option>                <option value="instructor">
+                    Instructor
+                </option>                <option value="pass">
+                    Pass
+                </option>                <option value="title">
+                    Title
+                </option>                <option value="uuid">
+                    UUID
+                </option>                <option value="year">
+                    Year
+                </option>    </select>
+            </div>
+            <div class="control descending">
+                <input type="checkbox" id="courses-order">
+                <label for="courses-order">Descending</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group groups">
+        <legend>Groups</legend>
+        <div class="control-group">
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-audit" data-key="audit" value="audit">
+                <label for="courses-groups-field-audit">Audit</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-avg" data-key="avg" value="avg">
+                <label for="courses-groups-field-avg">Average</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-dept" data-key="dept" value="dept">
+                <label for="courses-groups-field-dept">Department</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-fail" data-key="fail" value="fail">
+                <label for="courses-groups-field-fail">Fail</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-id" data-key="id" value="id">
+                <label for="courses-groups-field-id">ID</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-instructor" data-key="instructor" value="instructor">
+                <label for="courses-groups-field-instructor">Instructor</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-pass" data-key="pass" value="pass">
+                <label for="courses-groups-field-pass">Pass</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-title" data-key="title" value="title">
+                <label for="courses-groups-field-title">Title</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-uuid" data-key="uuid" value="uuid">
+                <label for="courses-groups-field-uuid">UUID</label>
+            </div>
+            <div class="control field">
+                <input type="checkbox" id="courses-groups-field-year" data-key="year" value="year">
+                <label for="courses-groups-field-year">Year</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group transformations">
+        <legend>Transformations</legend>
+        <div class="transformations-container"></div>
+        <div class="icon-container"><a class="icon icon-plus" href="#"></a></div>
+    </div>
+</form>

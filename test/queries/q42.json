@@ -1,0 +1,32 @@
+{
+    "title": "column syntax",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "courses_instructor": "*a*"
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 97
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                {
+                    "courses_pass": 2
+                },
+                {
+                    "courses_avg": 1
+                }
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

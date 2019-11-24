@@ -1,0 +1,74 @@
+{
+    "title": "SELECT * WHERE dept = 'epse' && id = 596 && avg = 97.09 && instructor = kishor, title = cor des ed res, ...",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "courses_dept": "epse"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_id": "596"
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_avg": 97.09
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_instructor": "kishor, nand"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_title": "cor des ed res"
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_pass": 11
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_fail": 0
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_audit": 0
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "86962"
+                    }
+                },
+                {
+                    "EQ": {
+                        "courses_year": 2007
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_avg"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "epse",
+            "courses_id": "596",
+            "courses_avg": 97.09
+        }
+    ]
+}

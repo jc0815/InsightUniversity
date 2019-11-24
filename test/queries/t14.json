@@ -1,0 +1,31 @@
+{
+    "title": "apply on column keys",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_pass",
+                "minmin"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_pass"
+            ],
+            "APPLY": [
+                {
+                    "minmin": {
+                        "MIN": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+"result":[{"courses_title":"career planning","courses_pass":16,"minmin":16},{"courses_title":"career planning","courses_pass":15,"minmin":15},{"courses_title":"thesis","courses_pass":1,"minmin":1},{"courses_title":"res mthd in educ","courses_pass":14,"minmin":14},{"courses_title":"multimedia sys","courses_pass":12,"minmin":12},{"courses_title":"assess lrn diffi","courses_pass":12,"minmin":12},{"courses_title":"assess lrn diffi","courses_pass":10,"minmin":10},{"courses_title":"assess lrn diffi","courses_pass":22,"minmin":22},{"courses_title":"assess lrn diffi","courses_pass":14,"minmin":14},{"courses_title":"educ stds autism","courses_pass":25,"minmin":25},{"courses_title":"educ stds autism","courses_pass":17,"minmin":17},{"courses_title":"educ stds autism","courses_pass":24,"minmin":24},{"courses_title":"dev el sk df&hrd","courses_pass":11,"minmin":11},{"courses_title":"acad assess schl","courses_pass":9,"minmin":9},{"courses_title":"acad assess schl","courses_pass":17,"minmin":17},{"courses_title":"sem in autism","courses_pass":16,"minmin":16},{"courses_title":"cor des ed res","courses_pass":11,"minmin":11},{"courses_title":"coll&uni teachng","courses_pass":9,"minmin":9},{"courses_title":"diff geometry i","courses_pass":4,"minmin":4},{"courses_title":"algb topology i","courses_pass":9,"minmin":9},{"courses_title":"algb geometry i","courses_pass":21,"minmin":21},{"courses_title":"harmonic anal i","courses_pass":11,"minmin":11},{"courses_title":"cl pro prim care","courses_pass":14,"minmin":14},{"courses_title":"fam nrs pract","courses_pass":17,"minmin":17},{"courses_title":"fam nrs pract","courses_pass":16,"minmin":16},{"courses_title":"fam nrs pract","courses_pass":12,"minmin":12},{"courses_title":"eth&profl issues","courses_pass":12,"minmin":12},{"courses_title":"work int health","courses_pass":82,"minmin":82}]}

@@ -1,0 +1,32 @@
+{
+    "title": "Two groups w/ MIN token",
+    "query": {
+      "WHERE": {
+        "LT": {
+          "rooms_seats": 20
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "rooms_seats",
+          "rooms_shortname",
+          "overallMin"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "rooms_seats",
+          "rooms_shortname"
+        ],
+        "APPLY": [
+          {
+            "overallMin": {
+              "MIN": "rooms_seats"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_seats":16,"rooms_shortname":"BIOL","overallMin":16},{"rooms_seats":18,"rooms_shortname":"BUCH","overallMin":18},{"rooms_seats":12,"rooms_shortname":"FNH","overallMin":12},{"rooms_seats":18,"rooms_shortname":"FSC","overallMin":18},{"rooms_seats":16,"rooms_shortname":"ANGU","overallMin":16},{"rooms_seats":8,"rooms_shortname":"IBLC","overallMin":8},{"rooms_seats":12,"rooms_shortname":"IBLC","overallMin":12},{"rooms_seats":10,"rooms_shortname":"IBLC","overallMin":10},{"rooms_seats":16,"rooms_shortname":"IBLC","overallMin":16},{"rooms_seats":12,"rooms_shortname":"SOWK","overallMin":12},{"rooms_seats":16,"rooms_shortname":"SOWK","overallMin":16},{"rooms_seats":6,"rooms_shortname":"MCML","overallMin":6},{"rooms_seats":8,"rooms_shortname":"MCML","overallMin":8},{"rooms_seats":16,"rooms_shortname":"ORCH","overallMin":16},{"rooms_seats":7,"rooms_shortname":"PHRM","overallMin":7},{"rooms_seats":14,"rooms_shortname":"PHRM","overallMin":14},{"rooms_seats":16,"rooms_shortname":"SPPH","overallMin":16},{"rooms_seats":12,"rooms_shortname":"SPPH","overallMin":12},{"rooms_seats":14,"rooms_shortname":"SPPH","overallMin":14},{"rooms_seats":14,"rooms_shortname":"WOOD","overallMin":14},{"rooms_seats":10,"rooms_shortname":"WOOD","overallMin":10},{"rooms_seats":12,"rooms_shortname":"WOOD","overallMin":12},{"rooms_seats":16,"rooms_shortname":"WOOD","overallMin":16}]
+}

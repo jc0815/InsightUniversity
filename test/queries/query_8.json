@@ -1,0 +1,32 @@
+{
+    "title": "Key not found",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "EQ": {
+                        "courses_avgg": 90
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_pass": 10
+                    }
+                },
+                {
+                    "LT": {
+                        "courses_fail": 50
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_uuid"
+            ],
+            "ORDER": "courses_uuid"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

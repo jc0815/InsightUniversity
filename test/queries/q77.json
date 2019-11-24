@@ -1,0 +1,38 @@
+{
+    "title": "* with NOT 3",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "NOT": {
+                        "IS": {
+                            "courses_dept": "*c"
+                        }
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_avg": 99
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_avg": 99.19
+        },
+        {
+            "courses_avg": 99.78
+        },
+        {
+            "courses_avg": 99.78
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "title": "no option",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 80
+                            }
+                        },
+                        {
+                            "GT": {
+                                "courses_avg": "99"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

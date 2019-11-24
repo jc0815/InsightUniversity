@@ -1,0 +1,82 @@
+{
+    "title": "GT, LT, EQ's in NOT",
+    "query": {
+        "WHERE": {
+            "NOT": {
+                "AND": [
+                    {
+                        "NOT": {
+                            "GT": {
+                                "courses_avg": 100
+                            }
+                        }
+                    },
+                    {
+                        "NOT": {
+                            "EQ": {
+                                "courses_fail": 50
+                            }
+                        }
+                    },
+                    {
+                        "NOT": {
+                            "LT": {
+                                "courses_avg": 0
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_pass": 140,
+            "courses_avg": 59.83
+        },
+        {
+            "courses_pass": 157,
+            "courses_avg": 61.54
+        },
+        {
+            "courses_pass": 273,
+            "courses_avg": 65
+        },
+        {
+            "courses_pass": 277,
+            "courses_avg": 66.48
+        },
+        {
+            "courses_pass": 206,
+            "courses_avg": 66.86
+        },
+        {
+            "courses_pass": 343,
+            "courses_avg": 67.83
+        },
+        {
+            "courses_pass": 489,
+            "courses_avg": 68.09
+        },
+        {
+            "courses_pass": 780,
+            "courses_avg": 68.65
+        },
+        {
+            "courses_pass": 495,
+            "courses_avg": 68.69
+        },
+        {
+            "courses_pass": 500,
+            "courses_avg": 70.66
+        }
+    ]
+}

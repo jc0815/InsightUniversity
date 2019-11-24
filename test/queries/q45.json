@@ -1,0 +1,21 @@
+{
+    "title": "GT in IS",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "GT": {
+                    "courses_avg": 99
+                }
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

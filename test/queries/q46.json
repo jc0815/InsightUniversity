@@ -1,0 +1,22 @@
+{
+    "title": "NOT in IS",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "NOT":{
+                    "courses_dept": "cpsc"
+                }
+            }
+        },
+
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

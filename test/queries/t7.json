@@ -1,0 +1,43 @@
+{
+    "title": "Invalid key type in apply token",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "IS": {
+              "rooms_furniture": "Classroom-Movable Tables & Chairs"
+            }
+          },
+          {
+            "LT": {
+              "rooms_seats": 20
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "rooms_seats",
+          "rooms_shortname",
+          "rooms_furniture",
+          "overallMax"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "rooms_seats",
+          "rooms_shortname",
+          "rooms_furniture"
+        ],
+        "APPLY": [
+          {
+            "overallMax": {
+              "MAX": "rooms_shortname"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

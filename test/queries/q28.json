@@ -1,0 +1,26 @@
+{
+    "title": "IS case 3",
+    "query": {
+        "WHERE": {
+            "AND": [{
+                "IS": {
+                    "courses_instructor": "***"
+                }
+            },{
+                "EQ": {
+                    "courses_avg": 97
+                }
+            }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_pass",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

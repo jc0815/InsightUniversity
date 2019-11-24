@@ -1,0 +1,32 @@
+{
+    "title": "Transformation two groups w/ count token ",
+    "query": {
+      "WHERE": {
+        "EQ": {
+          "rooms_seats": 60
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "rooms_seats",
+          "rooms_address",
+          "overallAvg"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "rooms_seats",
+          "rooms_address"
+        ],
+        "APPLY": [
+          {
+            "overallAvg": {
+              "COUNT": "rooms_seats"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_seats":60,"rooms_address":"2360 East Mall V6T 1Z3","overallAvg":1},{"rooms_seats":60,"rooms_address":"6333 Memorial Road","overallAvg":1},{"rooms_seats":60,"rooms_address":"1984 West Mall","overallAvg":1},{"rooms_seats":60,"rooms_address":"2053 Main Mall","overallAvg":1},{"rooms_seats":60,"rooms_address":"2356 Main Mall","overallAvg":1},{"rooms_seats":60,"rooms_address":"1984 Mathematics Road","overallAvg":1},{"rooms_seats":60,"rooms_address":"2125 Main Mall","overallAvg":1}]
+}

@@ -1,0 +1,57 @@
+{
+    "title": "Triple and statement w/ multiple key orders",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "IS": {
+              "rooms_shortname": "WOOD"
+            }
+          },
+          {
+            "NOT": {
+              "GT": {
+                "rooms_seats": 150
+              }
+            }
+          },
+          {
+            "IS": {
+              "rooms_type": "*Group"
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "rooms_shortname",
+          "rooms_number",
+          "rooms_type",
+          "minSeats"
+        ],
+        "ORDER": {
+          "dir": "UP",
+          "keys": [
+            "rooms_type",
+            "rooms_number"
+          ]
+        }
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "rooms_shortname",
+          "rooms_type",
+          "rooms_number"
+        ],
+        "APPLY": [
+          {
+            "minSeats": {
+              "MIN": "rooms_seats"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_shortname":"WOOD","rooms_number":"B75","rooms_type":"Small Group","minSeats":30},{"rooms_shortname":"WOOD","rooms_number":"B79","rooms_type":"Small Group","minSeats":21},{"rooms_shortname":"WOOD","rooms_number":"G41","rooms_type":"Small Group","minSeats":30},{"rooms_shortname":"WOOD","rooms_number":"G44","rooms_type":"Small Group","minSeats":14},{"rooms_shortname":"WOOD","rooms_number":"G53","rooms_type":"Small Group","minSeats":10},{"rooms_shortname":"WOOD","rooms_number":"G55","rooms_type":"Small Group","minSeats":10},{"rooms_shortname":"WOOD","rooms_number":"G57","rooms_type":"Small Group","minSeats":12},{"rooms_shortname":"WOOD","rooms_number":"G59","rooms_type":"Small Group","minSeats":10},{"rooms_shortname":"WOOD","rooms_number":"G65","rooms_type":"Small Group","minSeats":12},{"rooms_shortname":"WOOD","rooms_number":"G66","rooms_type":"Small Group","minSeats":16},{"rooms_shortname":"WOOD","rooms_number":"1","rooms_type":"Tiered Large Group","minSeats":120},{"rooms_shortname":"WOOD","rooms_number":"3","rooms_type":"Tiered Large Group","minSeats":88},{"rooms_shortname":"WOOD","rooms_number":"4","rooms_type":"Tiered Large Group","minSeats":120},{"rooms_shortname":"WOOD","rooms_number":"5","rooms_type":"Tiered Large Group","minSeats":120}]
+}

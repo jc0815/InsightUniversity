@@ -1,0 +1,31 @@
+{
+    "title": "group key not in column",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "minmin"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_dept",
+                "courses_instructor"
+            ],
+            "APPLY": [
+                {
+                    "minmin": {
+                        "MIN": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+"result":[{"courses_title":"career planning","minmin":16},{"courses_title":"multimedia sys","minmin":12},{"courses_title":"multimedia sys","minmin":12},{"courses_title":"assess lrn diffi","minmin":10},{"courses_title":"assess lrn diffi","minmin":22},{"courses_title":"educ stds autism","minmin":17},{"courses_title":"educ stds autism","minmin":17},{"courses_title":"dev el sk df&hrd","minmin":11},{"courses_title":"dev el sk df&hrd","minmin":11},{"courses_title":"algb topology i","minmin":9},{"courses_title":"algb topology i","minmin":9},{"courses_title":"cl pro prim care","minmin":14},{"courses_title":"cl pro prim care","minmin":14},{"courses_title":"cl pro prim care","minmin":14},{"courses_title":"fam nrs pract","minmin":16},{"courses_title":"fam nrs pract","minmin":12},{"courses_title":"work int health","minmin":82},{"courses_title":"work int health","minmin":82}]}

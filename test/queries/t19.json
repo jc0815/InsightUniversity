@@ -1,0 +1,55 @@
+{
+    "title": "all functions applied",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "a1",
+                "a2",
+                "a3",
+                "a4",
+                "a5"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_dept",
+                "courses_instructor"
+            ],
+            "APPLY": [
+                {
+                    "a1": {
+                        "MIN": "courses_pass"
+                    }
+                },
+                {
+                    "a2": {
+                        "MAX": "courses_pass"
+                    }
+                },
+                {
+                    "a3": {
+                        "AVG": "courses_pass"
+                    }
+                },
+                {
+                    "a4": {
+                        "SUM": "courses_pass"
+                    }
+                },
+                {
+                    "a5": {
+                        "COUNT": "courses_pass"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+"result":[{"courses_title":"career planning","a1":16,"a2":16,"a3":16,"a4":16,"a5":1},{"courses_title":"multimedia sys","a1":12,"a2":12,"a3":12,"a4":12,"a5":1},{"courses_title":"multimedia sys","a1":12,"a2":12,"a3":12,"a4":12,"a5":1},{"courses_title":"assess lrn diffi","a1":10,"a2":12,"a3":11,"a4":22,"a5":2},{"courses_title":"assess lrn diffi","a1":22,"a2":22,"a3":22,"a4":22,"a5":1},{"courses_title":"educ stds autism","a1":17,"a2":25,"a3":22,"a4":66,"a5":3},{"courses_title":"educ stds autism","a1":17,"a2":24,"a3":20.5,"a4":41,"a5":2},{"courses_title":"dev el sk df&hrd","a1":11,"a2":11,"a3":11,"a4":11,"a5":1},{"courses_title":"dev el sk df&hrd","a1":11,"a2":11,"a3":11,"a4":11,"a5":1},{"courses_title":"algb topology i","a1":9,"a2":9,"a3":9,"a4":9,"a5":1},{"courses_title":"algb topology i","a1":9,"a2":9,"a3":9,"a4":9,"a5":1},{"courses_title":"cl pro prim care","a1":14,"a2":14,"a3":14,"a4":14,"a5":1},{"courses_title":"cl pro prim care","a1":14,"a2":14,"a3":14,"a4":28,"a5":1},{"courses_title":"cl pro prim care","a1":14,"a2":14,"a3":14,"a4":14,"a5":1},{"courses_title":"fam nrs pract","a1":16,"a2":16,"a3":16,"a4":16,"a5":1},{"courses_title":"fam nrs pract","a1":12,"a2":16,"a3":13.33,"a4":40,"a5":2},{"courses_title":"work int health","a1":82,"a2":82,"a3":82,"a4":82,"a5":1},{"courses_title":"work int health","a1":82,"a2":82,"a3":82,"a4":82,"a5":1}]}

@@ -1,0 +1,26 @@
+{
+    "title": "empty APPLY",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_dept"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_dept",
+                "courses_instructor"
+            ],
+            "APPLY": [
+            ]
+        }
+    },
+    "isQueryValid": true,
+"result":[{"courses_title":"career planning","courses_dept":"cnps"},{"courses_title":"multimedia sys","courses_dept":"eece"},{"courses_title":"multimedia sys","courses_dept":"eece"},{"courses_title":"assess lrn diffi","courses_dept":"epse"},{"courses_title":"assess lrn diffi","courses_dept":"epse"},{"courses_title":"educ stds autism","courses_dept":"epse"},{"courses_title":"educ stds autism","courses_dept":"epse"},{"courses_title":"dev el sk df&hrd","courses_dept":"epse"},{"courses_title":"dev el sk df&hrd","courses_dept":"epse"},{"courses_title":"algb topology i","courses_dept":"math"},{"courses_title":"algb topology i","courses_dept":"math"},{"courses_title":"cl pro prim care","courses_dept":"nurs"},{"courses_title":"cl pro prim care","courses_dept":"nurs"},{"courses_title":"cl pro prim care","courses_dept":"nurs"},{"courses_title":"fam nrs pract","courses_dept":"nurs"},{"courses_title":"fam nrs pract","courses_dept":"nurs"},{"courses_title":"work int health","courses_dept":"spph"},{"courses_title":"work int health","courses_dept":"spph"}]}
